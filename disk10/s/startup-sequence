@@ -1,0 +1,27 @@
+run c/nofastmem
+wait 3
+dir ram:
+copy c/echo to ram:
+copy c/run to ram:
+assign c: ram:
+df0:c/cd ram:
+echo ""
+echo ""
+echo "          Hallo Rene !"
+echo "          ------------"
+echo ""
+echo "Ich hoffe, dass die Musik jetzt funktioniert. Wenn nicht, rufe mich"
+echo "bitte sofort an, dann muessen wir uns eine Testmethode dafuer"
+echo "einfallenlassen."
+echo ""
+echo "Dieses Mal ist das File Einbau_Doc wirklich auf der Diskette."
+echo ""
+echo "Der Fade Out ist eingebaut, wie auch ein Master Volume"
+echo ""
+echo "Viel Spass und Erfolg (hoffe ich wenigstens)!"
+echo ""
+echo "                        Viele Gruesse"
+echo "                                  Helmut"
+echo ""
+df0:c/cd df0:   
+Crack.obj5

@@ -1,0 +1,22 @@
+
+Im waves.all File in dieser Reihenfolge :
+
+Sound         Laenge
+-----         ------
+
+Ball-Stein  : 4764
+Ball-Holz   : 2332
+Bass-Stock  : 5024
+Stockzerfall : 7852
+Schuss       : 7984
+SpritePlopp  : 8434
+ScoreSound   : 2626
+Level-Harve  : 26978
+NussFangen   : 1090
+
+Die am besten passenden Abspielraten musst Du ausprobieren.
+
+
+Musikspeicherbereich : $20000-$3b6b0
+
+

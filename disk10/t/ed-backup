@@ -1,0 +1,42 @@
+echo ""
+echo "Please Wait a moment !"
+echo ""
+
+dir ram:
+makedir ram:c
+
+copy c/copy to ram:c
+Copy c/cd to ram:c
+
+assign c: ram:c
+cd ram:
+
+Copy df0:c/assign to c:
+Copy df0:c/dir to c:
+Copy df0:c/list to c:
+Copy df0:c/delete to c:
+Copy df0:c/type to c:
+Copy df0:c/ed to c:
+Copy df0:c/echo to c:
+Copy df0:c/execute to c:
+Copy df0:c/makedir to c:
+Copy df0:c/newcli to c:
+Copy df0:c/endcli to c:
+
+Copy df0:system/format to c:
+Copy df0:system/setmap to c:
+
+echo ""
+echo " -----------------------------------"
+echo "| A500  Workbench 1.2D  V33.5       |"
+echo "|                                   |"
+echo "| CLI - Disk from :  Helmut Melcher |"
+echo " -----------------------------------"
+echo ""
+
+SetMap d
+df0:c/Addbuffers df0: 20
+cd df0:
+newcli "con:0/13/520/243/Main-Cli-Window"
+endcli
+

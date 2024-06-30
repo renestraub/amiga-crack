@@ -1,0 +1,7 @@
+
+join anim1 anim2 anim3 anim4 anim5 anim6 anim7 anim8 anim9 anim10 anim11 anim12 as c5
+join c5 anim13 anim14 anim15 anim16 anim17 anim18 anim19 anim20 anim21 anim22 anim23 anim24 anim25 as c6
+del c5
+rename c6 as ANIM
+
+

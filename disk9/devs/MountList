@@ -1,0 +1,52 @@
+/* An example MOUNTLIST file enabling a 5.25" disk to be mounted
+   as DF2: and an interactive serial port mounted as AUX:
+*/
+
+/* If you only have 1 3.5" disk, change the name to DF1: and the Unit to 1 */
+DF2:       Device = trackdisk.device
+           Unit   = 2
+           Flags  = 1
+           Surfaces  = 2
+           BlocksPerTrack = 11
+           Reserved = 2
+	   PreAlloc = 11
+           Interleave = 0
+           LowCyl = 0  ;  HighCyl = 39
+           Buffers = 5
+           BufMemType = 3 
+#
+/* An example mount entry for preparing a hard disk for use
+   The hard disk is not included; this is only an example.
+*/
+
+RES0:      Device = hddisk.device
+           Unit   = 1
+           Flags  = 0
+           Surfaces  = 4
+           BlocksPerTrack = 17
+           Reserved = 2
+           Interleave = 0
+           LowCyl = 0  ;  HighCyl = 1
+           Buffers = 1
+           BufMemType = 3
+#
+
+/*  This is provided as an example of an alternative type of 
+    non-filing device mount.  Please note that L:aux-handler
+    is not provided, and thus this mount does not work.
+*/
+
+AUX:       Handler = L:aux-handler
+           Stacksize = 700
+           Priority = 5
+#
+/* This is an example of a non-filing system mount using a handler written
+   in C.  The SPEAKER: device is not included on this disk, and is used as
+   and example only.
+*/
+ 
+SPEAKER:   Handler = L:s-handler
+           Stacksize = 1000
+           Priority = 5
+	   GlobVec = 1
+#

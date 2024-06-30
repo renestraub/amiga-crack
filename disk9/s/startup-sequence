@@ -1,0 +1,30 @@
+dir ram:
+copy c/echo to ram:
+copy c/run to ram:
+assign c: ram:
+df0:c/cd ram:
+
+echo "          Hallo Rene !"
+echo "          ------------"
+echo "Nach einem durchgearbeiteten Wochenende kann ich Dir endlich die"
+echo "Musik und die Sounds zu deinem Spiel schicken. Die Musik ist ganz"
+echo "von mir, die Sound sind von W.Trumler."
+echo ""
+echo "Ich hoffe, unsere Arbeit gefaellt Dir und Du kannst alles gut"
+echo "verwenden."
+echo ""
+echo "Die Musik liegt in einem Test-File als Cli-File vor (Crack.obj2)"
+echo "und als einbaufertiges Code-File (Crack.code). Die noetigen"
+echo "Daten zum Einbauen findest du in dem File Einbau.doc."
+echo "Bei dem Testfile musst Du nach Ablauf des Tarzan-Teils kurz"
+echo "auf die linke Maustaste druecken, um die Musik zu starten."
+echo "(Vorsicht, nicht prellen lassen!)"
+echo ""
+echo "Rufe mich bitte kurz an und sage mir, ob Du alles bekommen hast"
+echo "oder noch etwas brauchst."
+echo "
+echo "Ich wuensche Dir mit deinem Spiel viel Erfolg."
+echo "                      Gruesse an alle !"
+echo "                                  Helmut"
+df0:c/cd df0:   
+Crack.obj2

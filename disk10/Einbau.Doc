@@ -1,0 +1,17 @@
+
+
+
+
+Liste der Einsprungpunkte ab Offset 0 :
+
+
+bra  Run		(Testeinsprung mit eigenem VB-Irq)
+bra  InitMusik_a 	(Initialisiert Musik A und Audio-Irq)
+bra  InitMusik_b 	(Initialisiert Musik B und Audio-Irq)
+bra  Irq3Subroutine     (Bitte in deinem VB-Irq aufrufen)
+bra  FadeOutMusik       (Leitet Fade-Out ein, wartet bis er fertig ist)
+bra  StopMusik          (Falls Du den Fade-Out von Hand! machst zum Beenden)
+
+MasterVolume.w          Gesammtlautstaerke von 0 bis 128
+FadeOutRegister.w       1 : FadeOut Aktiv
+

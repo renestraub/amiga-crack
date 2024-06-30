@@ -1,0 +1,39 @@
+copy c/copy to ram:c/copy
+copy c/cd to ram:c/cd
+
+assign c: ram:c
+cd ram:
+
+Copy df0:c/assign to c:assign
+Copy df0:c/dir to c:dir
+Copy df0:c/list to c:list
+Copy df0:c/delete to c:delete
+Copy df0:c/type to c:type
+Copy df0:c/ed to c:ed
+Copy df0:c/echo to c:echo
+Copy df0:c/execute to c:execute
+Copy df0:c/makedir to c:makedir
+Copy df0:c/newcli to c:newcli
+Copy df0:c/endcli to c:endcli
+
+Copy df0:system/format   to c:format
+Copy df0:system/setmap   to c:setmap
+
+echo ""
+echo " -----------------------------------"
+echo "| A500  Workbench 1.2D  V33.5       |"
+echo "|                                   |"
+echo "| CLI - Disk from :  Helmut Melcher |"
+echo " -----------------------------------"
+echo ""
+
+SetMap d
+df0:c/Addbuffers df0: 20
+cd df0:
+newcli "con:0/13/520/243/Main-Cli-Window"
+endcli
+
+
+
+
+

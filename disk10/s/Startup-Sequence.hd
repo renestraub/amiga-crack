@@ -1,0 +1,55 @@
+echo "A500/A2000 Workbench disk.  Release 1.2 version 33.50*N"
+echo "sample Startup-Sequence for use with a Hard Disk with Workbench installed"
+BindDrivers
+IF EXISTS sys:system
+    path sys:system add
+ENDIF
+IF EXISTS sys:utilities
+    path sys:utilities add
+ENDIF
+SetMap usa1
+
+dir ram:
+path ram: add
+
+addbuffers df0: 20
+
+failat 25
+assign >NIL: dh0:
+IF FAIL
+echo "Transfering control to DH0:*N"
+path reset
+assign SYS: dh0:
+if exists: dh0:c
+assign C: SYS:c
+endif
+if exists: dh0:l
+assign L: SYS:l
+endif
+if exists: dh0:fonts
+assign FONTS: SYS:fonts
+endif
+if exists: dh0:s
+assign S: SYS:s
+endif
+if exists: dh0:devs
+assign DEVS: SYS:devs
+endif
+if exists: dh0:libs
+assign LIBS: SYS:libs
+endif
+if exists: dh0:t
+assign T: SYS:t
+endif
+if exists sys:system
+path sys:system add
+endif
+if exists sys:utilities
+path sys:utilities add
+endif
+path ram: add
+cd dh0:
+ENDIF
+LoadWB
+SetClock >NIL: Opt load
+endcli > nil:
